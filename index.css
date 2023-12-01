@@ -1,0 +1,93 @@
+:root {
+  /* Fonts */
+  --ff-primary: 'Roboto', sans-serif;
+  --fs-700: 4rem;
+  --fs-600: 1.25rem;
+  --fs-400: 1rem;
+  /* Colors */
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --fs-700: 4.5rem;
+    --fs-600: 2.25rem;
+    --fs-400: 1.25rem;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  text-align: center;
+  color: var(--dark-green);
+  background-color: var(--snow);
+  background-image: url('./assets/xmasBG.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.headline {
+  margin-bottom: 2rem;
+  font-size: var(--fs-600);
+  font-weight: 700;
+}
+
+.container {
+  background: var(--wine-red);
+  color: var(--snow);
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.countdown-display {
+  font-size: 100px;
+  margin: 0;
+}
+
+.countdown-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.elf-gif {
+  max-width: 300px;
+  margin: auto;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .countdown-list {
+    flex-direction: row;
+  }
+}
+
+.countdown-list li {
+  display: inline-block;
+}
+
+.countdown-list li span {
+  display: block;
+  font-size: var(--fs-700);
+}
